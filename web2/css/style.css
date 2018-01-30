@@ -38,8 +38,33 @@
 .left-menu{
     float: left;
     width: 25%;
+    background-color: black;
 }
 .content{
     float: left;
-    width: 25%;
+    width: 75%;
+}
+.footer{
+    height: 100px;
+    line-height: 100px;    
+    text-align: center;
+    background-color: aqua;
+}
+img {
+    float: right;
+    margin:10px 15px;
+    
+}
+.left-menu li{
+    margin-top: 20px;
+}
+.left-menu a{
+    color: white;
+    text-decoration: none;
+    
+    
+}
+.left-menu a:hover{
+    color: pink;
+    text-decoration: underline;
 }
