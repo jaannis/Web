@@ -89,5 +89,5 @@ function addNumber(){
 document.querySelector('#another-button').innerHTML = 'Super cool button';
 
 document.querySelector('#another-button').addEventListener('click', function(){
-document.querySelectorAll('.place-for-text').innerHTML = 'Some other text';
+document.querySelector('.place-for-text').innerHTML = 'Some other text';
 });
