@@ -20,3 +20,4 @@ $('#registration-form').submit(function (event) {
 
     }
 });
+$('.gallery-image').fancybox();
