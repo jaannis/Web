@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>VueJS</title>
+
+ 
+
+</head>
+
+<body>
+<div id="app">
+    <ul>
+        <li v-for="var item in shopping list">
+            ({ item.name})
+        </li>
+    </ul>
+    <div>
+        <input placeholder= "Name for new Item: " type="text" v-model="new_item_title">
+        <button v-on:click="addNewItem()">Add</button>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</body>
+
+</html>
