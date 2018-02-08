@@ -1,27 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <head>
+        <title>VueJS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta charset="utf-8">
 
-<head>
-    <meta charset="utf-8">
-    <title>VueJS</title>
+        <style>
+            .done{
+                text-decoration: line-through;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <ul>
+                <li 
+                    v-for="item in shopping_list" 
+                    :class="[item.completed ? 'done' : '']" 
+                    v-on:click="item.completed = !item.completed"
+                >
+                    {{ item.name }}
+                    <button v-if="item.completed" >Delete</button>
+                </li>
+            </ul>
 
- 
+            <div>
+                <input 
+                    placeholder="Name for the new item:" 
+                    type="text" 
+                    v-model="new_item_title"
+                >
+                <button v-on:click="addNewItem()">Add</button>
+            </div>
+        </div>
 
-</head>
-
-<body>
-<div id="app">
-    <ul>
-        <li v-for="var item in shopping list">
-            ({ item.name})
-        </li>
-    </ul>
-    <div>
-        <input placeholder= "Name for new Item: " type="text" v-model="new_item_title">
-        <button v-on:click="addNewItem()">Add</button>
-    </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-</body>
-
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>  
+        <script src="vue.js"></script>  
+    </body>
 </html>
